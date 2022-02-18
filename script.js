@@ -6,6 +6,8 @@ We need a variable to hold the result of this function
 */
 let randomNumber;
 let computerChoice;
+let playerChoice = prompt("Choose 'Rock', 'Paper' or 'Scissors'", );
+let winner;
 
 function computerPlay() {
   randomNumber = Math.floor((Math.random() * 3) + 1);
@@ -23,4 +25,20 @@ function assignComputerChoice(randomNumber) {
   console.log(computerChoice);
 }
 
-/* */
+/* We are gonna make a function that takes a player choice and compares it with
+the computer choice to determine who wins the game*/
+
+function decideWinner() {
+    if (playerChoice === 'Rock' && computerChoice === 'Paper') {
+        winner = "Computer wins. Paper beats rock.";
+    } else if (playerChoice === 'Rock' && computerChoice === 'Scissors') {
+        winner = "You win. Rock beats scissors.";
+    } else if (playerChoice === 'Paper' && computerChoice === 'Scissors') {
+        winner = "Computer wins. Scissors beats paper.";
+    } else if (playerChoice === 'Paper' && computerChoice === 'Rock') {
+        winner = "You win. Paper beats rock.";
+    } else if (playerChoice === 'Scissors' && computerChoice === 'Rock') {
+        winner = "Computer wins. Rock beats scissors.";
+    } else winner = "You tied.";
+    console.log(winner);
+}  
