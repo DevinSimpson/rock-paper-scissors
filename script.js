@@ -9,6 +9,18 @@ let computerChoice;
 let playerChoice = prompt("Choose 'Rock', 'Paper' or 'Scissors'", );
 let winner;
 
+function game() {
+    for (let i =0; i < 5; i++) {
+        playRound()
+    }
+}
+
+function playRound() {
+    computerPlay()
+    assignComputerChoice()
+    decideWinner()
+}
+
 function computerPlay() {
   randomNumber = Math.floor((Math.random() * 3) + 1);
   console.log(randomNumber);
