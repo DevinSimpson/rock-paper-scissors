@@ -1,1 +1,1 @@
-# rock-paper-scissors
+# rock-paper-scissors - The goal of this project is to practice javascript by building a rock paper scissors application.
