@@ -52,7 +52,7 @@ function decideWinner() {
     } else if (playerChoice === 'Scissors' && computerChoice === 'Rock') {
         winner = "Computer wins. Rock beats scissors.";
     } else if (playerChoice === 'Scissors' && computerChoice === 'Paper') {
-        winner = "You win. Paper beats rock.";
+        winner = "You win. Scissors beats paper.";
     } else winner = "You tied.";
     console.log(winner);
 }  
