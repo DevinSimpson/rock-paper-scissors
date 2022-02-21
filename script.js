@@ -26,7 +26,7 @@ function computerPlay() {
   console.log(randomNumber);
 }
 
-function assignComputerChoice(randomNumber) {
+function assignComputerChoice() {
   if (randomNumber === 1) {
       computerChoice = 'Rock';
   } else if (randomNumber === 2) {
@@ -51,6 +51,8 @@ function decideWinner() {
         winner = "You win. Paper beats rock.";
     } else if (playerChoice === 'Scissors' && computerChoice === 'Rock') {
         winner = "Computer wins. Rock beats scissors.";
+    } else if (playerChoice === 'Scissors' && computerChoice === 'Paper') {
+        winner = "You win. Paper beats rock.";
     } else winner = "You tied.";
     console.log(winner);
 }  
