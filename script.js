@@ -7,6 +7,8 @@ We need a variable to hold the result of this function
 let randomNumber;
 let computerChoice;
 let playerChoice = prompt("Choose 'Rock', 'Paper' or 'Scissors'", );
+let computerScore;
+let playerScore;
 let winner;
 
 function game() {
