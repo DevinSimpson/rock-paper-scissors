@@ -6,7 +6,7 @@ We need a variable to hold the result of this function
 */
 let randomNumber;
 let computerChoice;
-let playerChoice = prompt("Choose 'Rock', 'Paper' or 'Scissors'", );
+let playerChoice = prompt("Choose 'Rock', 'Paper' or 'Scissors'").toLowerCase();
 let computerScore;
 let playerScore;
 let winner;
@@ -32,11 +32,11 @@ function computerPlay() {
 
 function assignComputerChoice() {
   if (randomNumber === 1) {
-      computerChoice = 'Rock';
+      computerChoice = 'rock';
   } else if (randomNumber === 2) {
-      computerChoice = 'Paper';
+      computerChoice = 'paper';
   } else {
-      computerChoice = 'Scissors';
+      computerChoice = 'scissors';
   }
   console.log(computerChoice);
 }
@@ -48,9 +48,9 @@ function decideWinner() {
     if (playerChoice === computerChoice) {
         winner = "You tied.";
     } else if (
-        (playerChoice === 'Rock' && computerChoice === 'Paper') ||
-        (playerChoice === 'Paper' && computerChoice === 'Scissors') ||
-        (playerChoice === 'Scissors' && computerChoice === 'Rock') 
+        (playerChoice === 'rock' && computerChoice === 'paper') ||
+        (playerChoice === 'paper' && computerChoice === 'scissors') ||
+        (playerChoice === 'scissors' && computerChoice === 'rock') 
        ){
         winner = `Computer wins. ${computerChoice} beats ${playerChoice}.`;
         computerScore = ++computerScore;
@@ -61,7 +61,7 @@ function decideWinner() {
     console.log(winner);
 }  
 
-function finalWinner() {
+function finalWinner(playerScore, computerScore) {
     if (playerScore > computerScore) {
         winnerUltimate = "YOU ARE THE ULTIMATE ROCK PAPER SCISSORS CHAMPION"
     } else if (playerScore < computerScore) {
