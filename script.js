@@ -10,10 +10,12 @@ let playerChoice = prompt("Choose 'Rock', 'Paper' or 'Scissors'", );
 let computerScore;
 let playerScore;
 let winner;
+let winnerUltimate;
 
 function game() {
     for (let i =0; i < 5; i++) {
         playRound()
+        finalWinner()
     }
 }
 
@@ -51,8 +53,22 @@ function decideWinner() {
         (playerChoice === 'Scissors' && computerChoice === 'Rock') 
        ){
         winner = `Computer wins. ${computerChoice} beats ${playerChoice}.`;
+        computerScore = ++computerScore;
     } else {
         winner = `You win. ${playerChoice} beats ${computerChoice}.`;
+        playerScore = ++playerScore;
     }
     console.log(winner);
 }  
+
+function finalWinner() {
+    if (playerScore > computerScore) {
+        winnerUltimate = "YOU ARE THE ULTIMATE ROCK PAPER SCISSORS CHAMPION"
+    } else if (playerScore < computerScore) {
+        winnerUltimate = "YOU HAVE BEEN BEATEN BY MACHINE. CRY."
+    }
+    else {
+        winnerUltimate = "YOU BOTH PUT UP A FIERCE FIGHT WITH NO WINNER. TRY AGAIN."
+    }
+    console.log(winnerUltimate)
+}
