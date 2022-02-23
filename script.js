@@ -43,18 +43,16 @@ function assignComputerChoice() {
 the computer choice to determine who wins the game*/
 
 function decideWinner() {
-    if (playerChoice === 'Rock' && computerChoice === 'Paper') {
-        winner = "Computer wins. Paper beats rock.";
-    } else if (playerChoice === 'Rock' && computerChoice === 'Scissors') {
-        winner = "You win. Rock beats scissors.";
-    } else if (playerChoice === 'Paper' && computerChoice === 'Scissors') {
-        winner = "Computer wins. Scissors beats paper.";
-    } else if (playerChoice === 'Paper' && computerChoice === 'Rock') {
-        winner = "You win. Paper beats rock.";
-    } else if (playerChoice === 'Scissors' && computerChoice === 'Rock') {
-        winner = "Computer wins. Rock beats scissors.";
-    } else if (playerChoice === 'Scissors' && computerChoice === 'Paper') {
-        winner = "You win. Scissors beats paper.";
-    } else winner = "You tied.";
+    if (playerChoice === computerChoice) {
+        winner = "You tied.";
+    } else if (
+        (playerChoice === 'Rock' && computerChoice === 'Paper') ||
+        (playerChoice === 'Paper' && computerChoice === 'Scissors') ||
+        (playerChoice === 'Scissors' && computerChoice === 'Rock') 
+       ){
+        winner = `Computer wins. ${computerChoice} beats ${playerChoice}.`;
+    } else {
+        winner = `You win. ${playerChoice} beats ${computerChoice}.`;
+    }
     console.log(winner);
 }  
