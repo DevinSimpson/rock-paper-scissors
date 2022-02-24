@@ -60,15 +60,3 @@ function decideWinner() {
     }
     console.log(winner);
 }  
-
-function finalWinner(playerScore, computerScore) {
-    if (playerScore > computerScore) {
-        winnerUltimate = "YOU ARE THE ULTIMATE ROCK PAPER SCISSORS CHAMPION"
-    } else if (playerScore < computerScore) {
-        winnerUltimate = "YOU HAVE BEEN BEATEN BY MACHINE. CRY."
-    }
-    else {
-        winnerUltimate = "YOU BOTH PUT UP A FIERCE FIGHT WITH NO WINNER. TRY AGAIN."
-    }
-    console.log(winnerUltimate)
-}
